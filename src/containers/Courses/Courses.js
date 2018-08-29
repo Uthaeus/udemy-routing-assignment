@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 import './Courses.css';
-import Course from './Course/Course';
+import Course from '../Course/Course';
 
 class Courses extends Component {
     state = {
@@ -11,6 +11,10 @@ class Courses extends Component {
             { id: 2, title: 'Vue - The Complete Guide' },
             { id: 3, title: 'PWA - The Complete Guide' }
         ]
+    }
+
+    componentDidMount() {
+        console.log(this.props);
     }
 
     courseSelectedHandler = (id) => {
@@ -24,7 +28,7 @@ class Courses extends Component {
                 <section className="Courses">
                     {
                         this.state.courses.map( course => {
-                            return <article className="Course" key={course.id} onClick={courseSelectedHandler(course.id)}>{course.title}</article>;
+                            return <article className="Course" key={course.id} onClick={() => this.courseSelectedHandler(course.id)}>{course.title}</article>;
                         } )
                     }
                 </section>

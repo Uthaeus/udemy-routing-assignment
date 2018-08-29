@@ -14,7 +14,9 @@ class App extends Component {
             <nav>
               <ul>
                 <li><NavLink 
-                  to="/Users"
+                  to="/" exact>Home</NavLink></li>
+                <li><NavLink 
+                  to="/users"
                   exact>Users</NavLink></li>
                 <li><NavLink 
                   to="/courses"
@@ -25,7 +27,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/users" component={Users} />
-            <Route path="/courses" exact component={Courses} />
+            <Route path="/courses" component={Courses} />
           </Switch>
           <ol style={{textAlign: 'left'}}>
             <li>Add Routes to load "Users" and "Courses" on different pages (by entering a URL, without Links)</li>

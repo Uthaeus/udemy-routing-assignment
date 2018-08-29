@@ -3,6 +3,7 @@ import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
+import Home from './containers/Home/Home';
 
 class App extends Component {
   render () {
@@ -23,8 +24,8 @@ class App extends Component {
           </header>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route />
-            <Route />
+            <Route path="/users" component={Users} />
+            <Route path="/courses" exact component={Courses} />
           </Switch>
           <ol style={{textAlign: 'left'}}>
             <li>Add Routes to load "Users" and "Courses" on different pages (by entering a URL, without Links)</li>

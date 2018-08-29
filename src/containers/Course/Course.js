@@ -29,7 +29,7 @@ class Course extends Component {
                 <h1>{this.state.courseTitle}</h1>
                 <p>You selected the Course with ID: {this.props.match.params.courseId}</p>
             </div>
-        )
+        );
     }
 }
 

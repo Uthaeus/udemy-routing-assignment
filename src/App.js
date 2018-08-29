@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
+import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 import Home from './containers/Home/Home';
 
@@ -27,6 +28,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/users" component={Users} />
+            <Route path="/courses/:courseId/:courseTitle" component={Course} />
             <Route path="/courses" component={Courses} />
           </Switch>
           <ol style={{textAlign: 'left'}}>
